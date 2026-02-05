@@ -27,7 +27,9 @@ class MainActivity : AppCompatActivity() {
         tvDescription.text = "Nublado"
         btnCambiarClima.text = "Cambiar"
 
+
         val ivWeather = findViewById<ImageView>(R.id.ivWeather)
+        ivWeather.setImageResource(R.drawable.ic_cloudy)
 
         val weatherList = listOf(
             WeatherOption(R.drawable.ic_sunny, "Soleado"),
@@ -38,7 +40,12 @@ class MainActivity : AppCompatActivity() {
             WeatherOption(R.drawable.ic_windy, "Ventoso")
         )
 
+        btnCambiarClima.setOnClickListener {
 
+            val randomClima = weatherList.random()
+            ivWeather.setImageResource(randomClima.imageResId)
+            tvDescription.text = randomClima.description
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
