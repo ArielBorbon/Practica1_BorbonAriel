@@ -1,6 +1,8 @@
 package Borbon_Ariel.MiniWeather
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -17,11 +19,24 @@ class MainActivity : AppCompatActivity() {
         val tvCity = findViewById<TextView>(R.id.tvCity)
         val tvTemperature = findViewById<TextView>(R.id.tvTemperature)
         val tvDescription = findViewById<TextView>(R.id.tvWeather)
+        val btnCambiarClima = findViewById<Button>(R.id.btnCambiarClima)
 
     tvGreeting.text = "Buenos Dias!"
         tvCity.text = "Cd.Obregon, Sonora"
         tvTemperature.text = "35°c"
         tvDescription.text = "Nublado"
+        btnCambiarClima.text = "Cambiar"
+
+        val ivWeather = findViewById<ImageView>(R.id.ivWeather)
+
+        val weatherList = listOf(
+            WeatherOption(R.drawable.ic_sunny, "Soleado"),
+            WeatherOption(R.drawable.ic_cloudy, "Nublado"),
+            WeatherOption(R.drawable.ic_rainy, "Lluvioso"),
+            WeatherOption(R.drawable.ic_stormy, "Tormenta"),
+            WeatherOption(R.drawable.ic_snowy, "Nevado"),
+            WeatherOption(R.drawable.ic_windy, "Ventoso")
+        )
 
 
 
@@ -32,3 +47,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+
+data class WeatherOption(
+    val imageResId: Int,
+    val description: String
+)
