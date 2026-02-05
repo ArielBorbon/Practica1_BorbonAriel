@@ -99,4 +99,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvWeather" />
 
+    <Button
+        android:id="@+id/btnCreditos"
+        android:layout_width="88dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="120dp"
+        android:text="Creditos"
+        android:textColorLink="#1E5359"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
