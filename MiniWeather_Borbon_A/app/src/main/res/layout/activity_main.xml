@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="259dp"
+        android:layout_marginBottom="19dp"
+        android:fontFamily="sans-serif-light"
+        android:text="..."
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvCity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="..."
+        android:textColor="@color/mustard"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/ivWeather"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGreeting" />
+
+    <ImageView
+        android:id="@+id/ivWeather"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTemperature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCity"
+        tools:srcCompat="@drawable/ic_cloudy" />
+
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="249dp"
+        android:layout_marginBottom="63dp"
+        android:fontFamily="sans-serif-black"
+        android:text="..."
+        android:textColor="@color/white"
+        android:textSize="70sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvWeather"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivWeather" />
+
+    <TextView
+        android:id="@+id/tvWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="328dp"
+        android:layout_marginBottom="150dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="..."
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTemperature" />
+
+    <Button
+        android:id="@+id/btnCambiarClima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWeather" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
